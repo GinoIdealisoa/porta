@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Apropos() {
   return (
-   <section className="min-h-screen flex flex-col items-center justify-center bg-[#0b0b0b] text-white px-6 py-20 relative">
+   <section className="min-h-screen flex flex-col items-center justify-center bg-[#0b0b0b] text-white px-6 py-20 relative" id='propos'>
       
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(2,132,199,0.15),transparent_65%)]"></div>
