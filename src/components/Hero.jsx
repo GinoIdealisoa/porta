@@ -37,7 +37,7 @@ export default function Hero() {
 
           <button className="flex items-center justify-center gap-3 bg-sky-600 text-black font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(2,132,199,0.4)] hover:bg-sky-500 transition">
             <FaCalendarAlt />
-            Prendre RDV
+           Nous contacter
           </button>
 
           <button className="flex items-center justify-center gap-3 border border-sky-600 text-sky-600 font-semibold px-8 py-4 rounded-xl hover:bg-sky-600 hover:text-black transition">
