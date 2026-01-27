@@ -5,7 +5,7 @@ import Apropos from "./components/Apropos.jsx";
 import Service from "./components/Service.jsx";
 import Langage from "./components/Langage.jsx";
 import Contact from "./components/Contact.jsx";
-
+import Footer from "./components/Footer.jsx";
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -21,6 +21,7 @@ export default function App() {
         <Service />
         <Langage />
         <Contact />
+        <Footer />
       </main>
     </div>
   );
