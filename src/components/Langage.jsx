@@ -9,12 +9,12 @@ export default function Langage() {
   const skills = [
     { name: "PHP", icon: <FaPhp />, color: "text-indigo-500" },
     { name: "Laravel", icon: <FaLaravel />, color: "text-red-500" },
-    { name: "Java", icon: <FaJava />, color: "text-orange-500" },
-    { name: "Spring Boot", icon: <SiSpringboot />, color: "text-green-500" },
+    // { name: "Java", icon: <FaJava />, color: "text-orange-500" },
+    // { name: "Spring Boot", icon: <SiSpringboot />, color: "text-green-500" },
     { name: "Python", icon: <FaPython />, color: "text-yellow-500" },
     { name: "Flask", icon: <SiFlask />, color: "text-gray-500" },
     { name: "Django", icon: <SiDjango />, color: "text-green-700" },
-    { name: "Angular", icon: <SiAngular />, color: "text-red-600" },
+    // { name: "Angular", icon: <SiAngular />, color: "text-red-600" },
     { name: "React", icon: <FaReact />, color: "text-sky-500" },
     { name: "Next.js", icon: <SiNextdotjs />, color: "text-black dark:text-white" },
   ];
@@ -30,7 +30,7 @@ export default function Langage() {
       <div className="max-w-6xl w-full text-center">
 
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-          Nos <span className="text-sky-600 dark:text-sky-400">Technologies</span>
+          Mes <span className="text-sky-600 dark:text-sky-400">Technologies</span>
         </h2>
 
         <p className="text-gray-600 dark:text-gray-300 text-lg mb-12">

@@ -1,73 +1,129 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+// ── Animations ─────────────────────────────────────────────
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.16, delayChildren: 0.2 },
+  },
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 90, damping: 18 },
+  },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+const splashVariants = {
+  initial: { scale: 1.1, opacity: 0.5 },
+  animate: {
+    scale: [1.1, 1.25, 1.1],
+    opacity: [0.5, 0.8, 0.5],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 export default function Apropos() {
   return (
     <section
       id="propos"
-      className="min-h-screen flex items-center justify-center 
-      bg-white dark:bg-[#0b0b0b] 
-      text-black dark:text-white 
-      px-6 py-24 transition-colors duration-500 
-      relative overflow-hidden"
+      className="
+        relative min-h-screen flex items-center justify-center
+        bg-white dark:bg-[#0a0a0a]
+        text-black dark:text-white
+        px-6 sm:px-10 lg:px-20
+        py-24
+        overflow-hidden
+      "
     >
-      {/* Splash background effect */}
-      <div className="absolute inset-0 
-        bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.15),transparent_60%)]
-        dark:bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.12),transparent_60%)]
-        pointer-events-none">
-      </div>
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_10%,rgba(14,165,233,0.12),transparent_40%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_80%_90%,rgba(59,130,246,0.10),transparent_50%)]" />
 
-      <div className="relative z-10 max-w-6xl w-full 
-        grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+      <motion.div
+        className="relative z-10 max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {/* ── TEXTE ────────────────────────────────────────────── */}
+        <div className="space-y-6 text-justify">
 
-        {/* Texte */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-            À propos de <span className="text-sky-600 dark:text-sky-400">E-KAODY</span>
-          </h2>
+          <motion.h2
+            variants={titleVariants}
+            className="text-4xl md:text-5xl font-extrabold leading-tight"
+          >
+            À propos de moi
+          </motion.h2>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-5">
-            Chez <span className="font-semibold">E-KAODY</span>, nous croyons que 
-            chaque entreprise mérite une présence digitale forte, moderne et performante. 
-            Notre mission est de concevoir des sites web qui ne se contentent pas 
-            d’être beaux, mais qui captivent, engagent et convertissent vos visiteurs.
-          </p>
+          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Jeune diplômé motivé, passionné par le monde numérique, spécialisé dans la création d’applications modernes avec <span className="font-semibold">Laravel</span> et <span className="font-semibold">React</span>.
+          </motion.p>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-5">
-            De la création graphique à l’optimisation SEO, en passant par 
-            le développement sur mesure, nous accompagnons nos clients 
-            à chaque étape pour transformer leurs idées en solutions digitales efficaces.
-          </p>
+          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Titulaire d’une Licence en Informatique de Gestion et d’un Master 2 en Génie Logiciel, je suis motivé par la conception de solutions innovantes, performantes et faciles à utiliser.
+          </motion.p>
 
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-            Avec une approche centrée sur l’innovation et la performance, 
-            <span className="font-semibold text-sky-600 dark:text-sky-400">
-              E-KAODY
-            </span>{" "}
-            s’engage à propulser votre marque vers le succès en ligne.
-          </p>
+          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Intéressé par l’intégration de l’intelligence artificielle dans Laravel, je vise à concevoir des applications plus astucieuses et intelligentes.
+          </motion.p>
+
+          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Curieux, autonome et créatif, je cherche à enrichir mes connaissances et à contribuer à des projets ambitieux.
+          </motion.p>
+
         </div>
 
-        {/* Image + Splash effect */}
-        <div className="relative flex justify-center">
-          
-          {/* Glow derrière l'image */}
-          <div className="absolute -inset-4 
-            bg-[radial-gradient(circle,rgba(56,189,248,0.35),transparent_70%)]
-            blur-2xl">
-          </div>
+        {/* ── IMAGE ─────────────────────────────────────────────── */}
+        <div className="relative flex justify-center lg:justify-end group">
 
-          <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-            alt="E-KAODY digital agency"
-            className="relative w-full max-w-md rounded-2xl 
-            shadow-2xl border border-sky-500/30 
-            hover:scale-105 transition-transform duration-500"
+          <motion.div
+            className="
+              absolute -inset-16
+              bg-gradient-to-br from-sky-400/40 via-cyan-300/20 to-blue-500/10
+              rounded-full blur-3xl
+              opacity-70
+            "
+            variants={splashVariants}
+            initial="initial"
+            animate="animate"
           />
-        </div>
 
-      </div>
+          <div
+            className="
+              relative w-full max-w-md lg:max-w-lg
+              rounded-3xl overflow-hidden
+              shadow-2xl
+              border border-white/10
+            "
+          >
+            <img
+              src="https://images.pexels.com/photos/7688335/pexels-photo-7688335.jpeg"
+              alt="Développement web"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
-

@@ -9,7 +9,7 @@ function Header({ darkMode, setDarkMode }) {
   const sections = [
     { name: "Accueil", id: "home" },
     { name: "À propos", id: "propos" },
-    { name: "Service", id: "service" },
+    { name: "Projet", id: "service" },
     { name: "Langage", id: "langage" },
     { name: "Contact", id: "contact" },
   ];
@@ -41,10 +41,10 @@ function Header({ darkMode, setDarkMode }) {
         {/* Logo */}
         <div className="flex items-center">
           <div className="w-12 h-12 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 flex items-center justify-center text-white font-bold text-xl mr-3 shadow-lg transition-transform duration-300 hover:scale-105">
-            E-K
+           I-DG
           </div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-sky-400 tracking-tight">
-            E-KAODY
+            DimbyGino
           </h1>
         </div>
 

@@ -11,9 +11,9 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 flex items-center justify-center text-white font-bold text-xl shadow-lg">
-            E-K
+            I-DG
           </div>
-          <span className="text-xl font-bold">E-KAODY</span>
+          <span className="text-xl font-bold">Dimby Gino</span>
         </div>
 
         {/* Liens rapides */}
@@ -36,7 +36,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="relative z-10 text-center mt-10 text-gray-500 dark:text-gray-400 text-sm">
-        © {new Date().getFullYear()} E-KAODY. Tous droits réservés.
+        © {new Date().getFullYear()} Gino Idealisoa. Tous droits réservés.
       </div>
     </footer>
   );
