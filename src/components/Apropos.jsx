@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import image3 from '../assets/images/image3.jpeg';
+
 // ── Animations ─────────────────────────────────────────────
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -59,7 +61,11 @@ export default function Apropos() {
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_80%_90%,rgba(59,130,246,0.10),transparent_50%)]" />
 
       <motion.div
-        className="relative z-10 max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
+        className="
+          relative z-10 max-w-7xl w-full
+          grid grid-cols-1 lg:grid-cols-2
+          gap-16 items-center
+        "
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -75,19 +81,31 @@ export default function Apropos() {
             À propos de moi
           </motion.h2>
 
-          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <motion.p
+            variants={textVariants}
+            className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
             Jeune diplômé motivé, passionné par le monde numérique, spécialisé dans la création d’applications modernes avec <span className="font-semibold">Laravel</span> et <span className="font-semibold">React</span>.
           </motion.p>
 
-          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <motion.p
+            variants={textVariants}
+            className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
             Titulaire d’une Licence en Informatique de Gestion et d’un Master 2 en Génie Logiciel, je suis motivé par la conception de solutions innovantes, performantes et faciles à utiliser.
           </motion.p>
 
-          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <motion.p
+            variants={textVariants}
+            className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
             Intéressé par l’intégration de l’intelligence artificielle dans Laravel, je vise à concevoir des applications plus astucieuses et intelligentes.
           </motion.p>
 
-          <motion.p variants={textVariants} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <motion.p
+            variants={textVariants}
+            className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
             Curieux, autonome et créatif, je cherche à enrichir mes connaissances et à contribuer à des projets ambitieux.
           </motion.p>
 
@@ -117,9 +135,15 @@ export default function Apropos() {
             "
           >
             <img
-              src="https://images.pexels.com/photos/7688335/pexels-photo-7688335.jpeg"
-              alt="Développement web"
-              className="w-full h-full object-cover"
+              src={image3}
+              alt="Gino Idealisoa"
+              className="
+                w-full
+                h-[320px]
+                md:h-[420px]
+                lg:h-[520px]
+                object-cover
+              "
             />
           </div>
         </div>

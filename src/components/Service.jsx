@@ -43,9 +43,9 @@ export default function Service() {
     {
       title: "Ny antsa ministry",
       description: [
-        "Système complet d’orientation pour Madagascar.",
-        "Combine React, Laravel et Flask pour fournir des recommandations personnalisées.",
-        "Aide les étudiants à choisir les formations adaptées à leur profil et objectifs."
+        "Ny Antsa Ministry est une organisation chrétienne dédiée à l'édification spirituelle.",
+
+"Fondée sur des valeurs bibliques, notre mission est de servir Dieu à travers la musique, la formation et le développement des talents."
       ],
       image: antsa,
       github: "https://github.com/GinoIdealisoa/ny_antsa_ministry",

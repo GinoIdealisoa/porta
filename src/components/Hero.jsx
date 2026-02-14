@@ -199,10 +199,19 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-[#0b0b0b] text-black dark:text-white relative overflow-hidden transition-colors duration-500"
-    >
+ <section
+  id="home"
+  className="
+    min-h-screen flex items-center justify-center
+    bg-white dark:bg-[#0b0b0b]
+    text-black dark:text-white
+    relative overflow-hidden
+    transition-colors duration-500
+    pb-1
+  "
+>
+
+
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
