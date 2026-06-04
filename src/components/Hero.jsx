@@ -1,6 +1,6 @@
 import { FaCalendarAlt } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
-import CV from "../assets/cv IDEALISOA Dimby Gino.pdf";
+import CV from "../assets/Idealisoa Dimby Gino CV developpeur web.pdf";
 export default function Hero() {
   const canvasRef = useRef(null);
   const [animatedText, setAnimatedText] = useState([]);
